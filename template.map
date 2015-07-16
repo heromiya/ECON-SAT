@@ -3,7 +3,7 @@ MAP
   FONTSET "fonts.txt"
   IMAGECOLOR 170 255 255
   IMAGETYPE "png"
-  NAME "urban"
+  NAME "Nighttime Light"
   SIZE 640 640
   STATUS ON
   UNITS METERS
@@ -16,10 +16,8 @@ MAP
     IMAGEMODE RGB
   END
 
-  PROJECTION
-  "proj=merc" "a=6378137" "b=6378137" "lat_ts=0.0" "lon_0=0.0" "x_0=0.0" "y_0=0" "k=1.0" "units=m" "nadgrids=@null" "wktext" "no_defs"
-  #PROJ4
-  END # PROJECTION
+#  PROJECTION  "proj=merc" "a=6378137" "b=6378137" "lat_ts=0.0" "lon_0=0.0" "x_0=0.0" "y_0=0" "k=1.0" "units=m" "nadgrids=@null" "wktext" "no_defs" END # PROJECTION
+  PROJECTION "init=epsg:3857" END
   LEGEND
     KEYSIZE 20 10
     KEYSPACING 5 5
@@ -49,238 +47,27 @@ MAP
   END # SCALEBAR
 
   LAYER
-      NAME "OSM"
+      NAME "DMSP"
       TYPE RASTER
+      PROJECTION "init=epsg:4326" END
       STATUS ON
-      CONNECTION "http://127.0.0.1:3857/service?LAYERS=osm&FORMAT=image%2Fpng&STYLES=&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap"
-      CONNECTIONTYPE WMS
-      METADATA
-        "wms_srs"             "EPSG:3857"
-        "wms_name"            "country_bounds"
-        "wms_server_version"  "1.1.1"
-        "wms_format"          "image/png"
-      END
-    END
-
-  LAYER
-      NAME "ESRI"
-      TYPE RASTER
-      STATUS ON
-      CONNECTION "http://127.0.0.1:3857/service?LAYERS=arcgis&FORMAT=image%2Fpng&STYLES=&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap"
-      CONNECTIONTYPE WMS
-      METADATA
-        "wms_srs"             "EPSG:3857"
-        "wms_name"            "country_bounds"
-        "wms_server_version"  "1.1.1"
-        "wms_format"          "image/png"
-      END
-    END
-
-  LAYER
-    NAME 'quicklook_1990'
-  PROJECTION
-PROJ4
-  END # PROJECTION
-    DUMP true
-    TYPE RASTER
-    DATA  QL_1990
-    STATUS ON
-    OFFSITE  0 0 0
-    PROCESSING "SCALE=AUTO"
-    PROCESSING "CLOSE_CONNECTION=DEFER"
-    PROCESSING "OVERSAMPLE_RATIO=1.5"
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F101992.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
   END
 
   LAYER
-    NAME 'quicklook_2000'
-  PROJECTION
-PROJ4
-  END # PROJECTION
-  DUMP true
-    TYPE RASTER
-    DATA QL_2000
-    STATUS ON
-    OFFSITE  0 0 0
-    PROCESSING "SCALE=AUTO"
-    PROCESSING "CLOSE_CONNECTION=DEFER"
-    PROCESSING "OVERSAMPLE_RATIO=1.5"
+	NAME "Admin"
+	TYPE POLYGON
+	PROJECTION "init=epsg:4326" END
+	STATUS ON
+	CONNECTIONTYPE OGR
+	CONNECTION "/mnt/gum-lvm/GIS_Data_Archive/SQLite/naturalearthdata.com/natural_earth_vector.sqlite"
+	DATA "ne_10m_admin_0_countries"
+	CLASS
+		STYLE
+			WIDTH 0.5
+			OUTLINECOLOR 255 255 0
+		END
+	END
   END
-
-  LAYER
-    NAME 'quicklook_2005'
-  PROJECTION
-PROJ4
-  END # PROJECTION
-    DUMP true
-    TYPE RASTER
-    DATA QL_2005
-    STATUS ON
-    OFFSITE  0 0 0
-    PROCESSING "SCALE=AUTO"
-    PROCESSING "CLOSE_CONNECTION=DEFER"
-    PROCESSING "OVERSAMPLE_RATIO=1.5"
-  END
-
-  LAYER
-    NAME 'quicklook_2010'
-  PROJECTION
-PROJ4
-  END # PROJECTION
-    DUMP true
-    TYPE RASTER
-    DATA QL_2010
-    STATUS ON
-    OFFSITE  0 0 0
-    PROCESSING "SCALE=AUTO"
-    PROCESSING "CLOSE_CONNECTION=DEFER"
-    PROCESSING "OVERSAMPLE_RATIO=1.5"
-  END
-
-  LAYER
-#    DATA llgc.cls.tile/expansion.vrt
-     DATA URBAN_EXP
-  PROJECTION
-PROJ4
-#  "proj=merc" "a=6378137" "b=6378137" "lat_ts=0.0" "lon_0=0.0" "x_0=0.0" "y_0=0" "k=1.0" "units=m" "nadgrids=@null" "wktext" "no_defs"
-  END # PROJECTION
-    NAME 'urban_expansion'
-    STATUS ON
-    TYPE RASTER
-    UNITS METERS
-    CLASSITEM "[pixel]"
-    CLASS
-	EXPRESSION "90"
-		   STYLE
-			  COLOR 255 0 0
-			  	END
-				END
-				CLASS
-					EXPRESSION "100"
-						   STYLE
-							  COLOR 255 255 0
-							  	END
-								END
-								CLASS
-									EXPRESSION "105"
-										   STYLE
-											  COLOR 0 255 0
-											  	END
-												END
-												CLASS
-													EXPRESSION "110"
-														   STYLE
-															  COLOR 0 0 255
-															  	END
-																END
-  END # LAYER
-  
-  LAYER
-    DATA URBAN_2010
-  PROJECTION
-PROJ4
-  END # PROJECTION
-  GROUP urban
-    NAME URBAN_2010
-    STATUS ON
-    TYPE RASTER
-    UNITS METERS
-    CLASSITEM "[pixel]"
-    CLASS
-	EXPRESSION "110"
-		   STYLE
-			  COLOR 0 0 255
-			  	END
-				END
-  END # LAYER
-
-  LAYER
-    DATA URBAN_2005
-  PROJECTION
-PROJ4
-  END # PROJECTION
-  GROUP urban
-    NAME URBAN_2005
-    STATUS ON
-    TYPE RASTER
-    UNITS METERS
-    CLASSITEM "[pixel]"
-    CLASS
-	EXPRESSION "105"
-		   STYLE
-			  COLOR 0 255 0
-			  	END
-				END
-  END # LAYER
-
-  LAYER
-    DATA URBAN_2000
-  PROJECTION
-PROJ4
-  END # PROJECTION
-  GROUP urban
-    NAME URBAN_2000
-    STATUS ON
-    TYPE RASTER
-    UNITS METERS
-    CLASSITEM "[pixel]"
-    CLASS
-	EXPRESSION "100"
-		   STYLE
-			  COLOR 255 255 0
-			  	END
-				END
-  END # LAYER
-
-  LAYER
-    DATA URBAN_1990
-  PROJECTION
-PROJ4
-  END # PROJECTION
-  GROUP urban
-    NAME URBAN_1990
-    STATUS ON
-    TYPE RASTER
-    UNITS METERS
-    CLASSITEM "[pixel]"
-    CLASS
-	EXPRESSION "90"
-		   STYLE
-			  COLOR 255 0 0
-			  	END
-				END
-  END # LAYER
-
-  LAYER
-  CONNECTIONTYPE ogr
-  CONNECTION "/dias/users/miyazaki.h.u-tokyo/auto-urbanmapping/misc/asia-latest.osm.gdb"
-  DATA "lines"
-    NAME "road"
-    PROJECTION
-      "proj=longlat"
-      "datum=WGS84"
-      "no_defs"
-    END # PROJECTION
-    STATUS ON
-    TILEITEM "location"
-    TYPE LINE
-    UNITS METERS
-    CLASSITEM highway
-    CLASS
-      EXPRESSION "trunk"
-      NAME "Single symbol"
-      STYLE
-        COLOR 0 0 0
-        WIDTH 1
-      END # STYLE
-    END # CLASS
-    CLASS
-      EXPRESSION "primary"
-      NAME "Single symbol"
-      STYLE
-        COLOR 0 0 0
-        WIDTH 1
-      END # STYLE
-    END # CLASS
-    END # LAYER
-    
 END # MAP
