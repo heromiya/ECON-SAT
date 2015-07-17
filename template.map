@@ -1,10 +1,10 @@
-MAP
-  CONFIG "PROJ_LIB" "/usr/share/proj/"
-  FONTSET "fonts.txt"
+MAP 
+  CONFIG "PROJ_LIB" "/usr/share/proj/" 
+  FONTSET "fonts.txt" 
   IMAGECOLOR 170 255 255
   IMAGETYPE "png"
   NAME "Nighttime Light"
-  SIZE 640 640
+  SIZE 800 640
   STATUS ON
   UNITS METERS
 
@@ -16,7 +16,6 @@ MAP
     IMAGEMODE RGB
   END
 
-#  PROJECTION  "proj=merc" "a=6378137" "b=6378137" "lat_ts=0.0" "lon_0=0.0" "x_0=0.0" "y_0=0" "k=1.0" "units=m" "nadgrids=@null" "wktext" "no_defs" END # PROJECTION
   PROJECTION "init=epsg:3857" END
   LEGEND
     KEYSIZE 20 10
@@ -45,24 +44,840 @@ MAP
       PARTIALS false
      END 
   END # SCALEBAR
-
   LAYER
-      NAME "DMSP"
+      NAME "F101992.v4b.stable_lights.avg_lights_x_pct.tif"
       TYPE RASTER
       PROJECTION "init=epsg:4326" END
       STATUS ON
       DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F101992.v4b.stable_lights.avg_lights_x_pct.tif"
       PROCESSING "SCALE=AUTO"
   END
-
+  LAYER
+      NAME "F101992.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F101992.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F101993.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F101993.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F101993.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F101993.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F101994.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F101994.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F101994.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F101994.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121994.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121994.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121994.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121994.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121995.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121995.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121995.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121995.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121996.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121996.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121996.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121996.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121997.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121997.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121997.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121997.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121998.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121998.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121998.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121998.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121999.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121999.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F121999.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F121999.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F141997.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F141997.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F141997.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F141997.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F141998.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F141998.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F141998.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F141998.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F141999.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F141999.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F141999.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F141999.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142000.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142000.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142000.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142000.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142001.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142001.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142001.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142001.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142002.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142002.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142002.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142002.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142003.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142003.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F142003.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F142003.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152000.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152000.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152000.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152000.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152001.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152001.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152001.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152001.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152002.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152002.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152002.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152002.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152003.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152003.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152003.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152003.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152004.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152004.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152004.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152004.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152005.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152005.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152005.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152005.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152006.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152006.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152006.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152006.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152007.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152007.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152007.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152007.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152008.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152008.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F152008.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F152008.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162004.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162004.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162004.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162004.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162005.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162005.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162005.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162005.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162006.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162006.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162006.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162006.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162007.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162007.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162007.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162007.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162008.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162008.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162008.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162008.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162009.v4b.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162009.v4b.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F162009.v4b_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F162009.v4b_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182010.v4c.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182010.v4c.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182010.v4c_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182010.v4c_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182011.v4c.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182011.v4c.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182011.v4c_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182011.v4c_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182012.v4c.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182012.v4c.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182012.v4c_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182012.v4c_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182013.v4c.stable_lights.avg_lights_x_pct.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182013.v4c.stable_lights.avg_lights_x_pct.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "F182013.v4c_web.stable_lights.avg_vis.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/F182013.v4c_web.stable_lights.avg_vis.tif"
+      PROCESSING "SCALE=AUTO"
+  END
+  LAYER
+      NAME "SVDNB_npp_20140101-20140131_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140101-20140131_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140101-20140131_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140101-20140131_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140501-20140531_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140501-20140531_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140501-20140531_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140501-20140531_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140601-20140630_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140601-20140630_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140601-20140630_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140601-20140630_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140701-20140731_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140701-20140731_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140701-20140731_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140701-20140731_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140901-20140930_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140901-20140930_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140901-20140930_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140901-20140930_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20141001-20141031_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141001-20141031_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20141001-20141031_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141001-20141031_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20141101-20141130_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141101-20141130_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20141101-20141130_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141101-20141130_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20141201-20141231_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141201-20141231_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20141201-20141231_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141201-20141231_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150101-20150131_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150101-20150131_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150101-20150131_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150101-20150131_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150201-20150228_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150201-20150228_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150201-20150228_vcmcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150201-20150228_vcmcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150201-20150228_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150201-20150228_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150201-20150228_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150201-20150228_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150301-20150331_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150301-20150331_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150301-20150331_vcmcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150301-20150331_vcmcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150301-20150331_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150301-20150331_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150301-20150331_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150301-20150331_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150401-20150430_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150401-20150430_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150401-20150430_vcmcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150401-20150430_vcmcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150401-20150430_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150401-20150430_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150401-20150430_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150401-20150430_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150501-20150531_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150501-20150531_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150501-20150531_vcmcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150501-20150531_vcmcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150501-20150531_vcmslcfg.cf_cvg.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150501-20150531_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
 	NAME "Admin"
 	TYPE POLYGON
 	PROJECTION "init=epsg:4326" END
 	STATUS ON
 	CONNECTIONTYPE OGR
-	CONNECTION "/mnt/gum-lvm/GIS_Data_Archive/SQLite/naturalearthdata.com/natural_earth_vector.sqlite"
-	DATA "ne_10m_admin_0_countries"
+        CONNECTION "/vsizip/GIS_Data_Archive/src/mappinghacks.com/world_borders.zip"
+        DATA "world_borders"
+#	CONNECTION "/mnt/gum-lvm/GIS_Data_Archive/SQLite/naturalearthdata.com/natural_earth_vector.sqlite"
+#	DATA "ne_10m_admin_0_countries"
 	CLASS
 		STYLE
 			WIDTH 0.5
