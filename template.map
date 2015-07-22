@@ -861,6 +861,14 @@ MAP
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
+      NAME "SVDNB_npp_20150501-20150531_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150501-20150531_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
       NAME "SVDNB_npp_20150501-20150531_vcmslcfg.cf_cvg.tif"
       TYPE RASTER
       PROJECTION "init=epsg:4326" END
