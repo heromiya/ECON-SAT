@@ -605,6 +605,14 @@ MAP
       PROCESSING "SCALE=AUTO"
   END
   LAYER
+      NAME "SVDNB_npp_20140101-20140131_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140101-20140131_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
       NAME "SVDNB_npp_20140101-20140131_vcmslcfg.avg_rade9.tif"
       TYPE RASTER
       PROJECTION "init=epsg:4326" END
@@ -618,6 +626,30 @@ MAP
       PROJECTION "init=epsg:4326" END
       STATUS ON
       DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140101-20140131_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140301-20140331_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140301-20140331_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140301-20140331_vcmslcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140301-20140331_vcmslcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140501-20140531_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140501-20140531_vcmcfg.avg_rade9.tif"
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
@@ -637,6 +669,14 @@ MAP
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
+      NAME "SVDNB_npp_20140601-20140630_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140601-20140630_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
       NAME "SVDNB_npp_20140601-20140630_vcmslcfg.avg_rade9.tif"
       TYPE RASTER
       PROJECTION "init=epsg:4326" END
@@ -650,6 +690,14 @@ MAP
       PROJECTION "init=epsg:4326" END
       STATUS ON
       DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140601-20140630_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20140701-20140731_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140701-20140731_vcmcfg.avg_rade9.tif"
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
@@ -669,6 +717,14 @@ MAP
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
+      NAME "SVDNB_npp_20140901-20140930_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140901-20140930_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
       NAME "SVDNB_npp_20140901-20140930_vcmslcfg.avg_rade9.tif"
       TYPE RASTER
       PROJECTION "init=epsg:4326" END
@@ -682,6 +738,14 @@ MAP
       PROJECTION "init=epsg:4326" END
       STATUS ON
       DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20140901-20140930_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20141001-20141031_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141001-20141031_vcmcfg.avg_rade9.tif"
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
@@ -701,6 +765,14 @@ MAP
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
+      NAME "SVDNB_npp_20141101-20141130_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141101-20141130_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
       NAME "SVDNB_npp_20141101-20141130_vcmslcfg.avg_rade9.tif"
       TYPE RASTER
       PROJECTION "init=epsg:4326" END
@@ -717,6 +789,14 @@ MAP
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
+      NAME "SVDNB_npp_20141201-20141231_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141201-20141231_vcmcfg.avg_rade9.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
       NAME "SVDNB_npp_20141201-20141231_vcmslcfg.avg_rade9.tif"
       TYPE RASTER
       PROJECTION "init=epsg:4326" END
@@ -730,6 +810,14 @@ MAP
       PROJECTION "init=epsg:4326" END
       STATUS ON
       DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20141201-20141231_vcmslcfg.cf_cvg.tif"
+      PROCESSING "SCALE=-1,10"
+      PROCESSING "SCALE_BUCKETS=10"  END
+  LAYER
+      NAME "SVDNB_npp_20150101-20150131_vcmcfg.avg_rade9.tif"
+      TYPE RASTER
+      PROJECTION "init=epsg:4326" END
+      STATUS ON
+      DATA "/mnt/gum-lvm/GIS_Data_Archive/GTiff/ngdc.noaa.gov/SVDNB_npp_20150101-20150131_vcmcfg.avg_rade9.tif"
       PROCESSING "SCALE=-1,10"
       PROCESSING "SCALE_BUCKETS=10"  END
   LAYER
