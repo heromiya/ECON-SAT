@@ -20,11 +20,11 @@ for ARG in `cat ROI.lst | grep KOR`; do
     export LATMAX=`echo $XMAX $YMAX | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $2}'`
     export LONMIN=`echo $XMIN $YMIN | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $1}'`
     export LONMAX=`echo $XMAX $YMAX | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $1}'`
-    for FILE in `ls ngdc.noaa.gov | grep -e \.tif$ | grep -v -e web.stable_lights.avg_vis.`; do
-	export FILE
-	make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.txt
-	#maps/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.png
-    done 
+#	for FILE in `ls ngdc.noaa.gov | grep -e \.tif$ | grep -v -e web.stable_lights.avg_vis.`; do
+#		export FILE
+#		make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.txt
+		#maps/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.png
+#	done
 
 #    for PRODUCT in .stable_lights.avg_lights_x_pct; do 
 #	export PRODUCT
@@ -32,7 +32,9 @@ for ARG in `cat ROI.lst | grep KOR`; do
 #   done
 #	make pdf/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp.vcmslcfg.avg_rade9.pdf
 
+	make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp_vcmslcfg.avg_rade9.sqlite
 
 done
+
 
 exit 0
