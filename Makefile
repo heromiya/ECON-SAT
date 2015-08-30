@@ -27,7 +27,6 @@ tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).$(FILE).sqlite:
 	v.out.ogr -c input=gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) dsn=$@ type=area format=SQLite
 #	v.db.select gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) > $@
 
-tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_vcmslcfg.avg_rade9.sqlite: tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_*_vcmslcfg.avg_rade9.tif.txt
-	$(foreach f,$+,echo "" | sqlite3 $@;)
+tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_vcmslcfg.avg_rade9.sqlite: tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_*_vcmslcfg.avg_rade9.tif.sqlite
+	$(foreach f,$+,ogr2ogr -f SQLite -append -update $@ $(f) -nln tbl_$(subst _vcmslcfg.avg_rade9.tif.sqlite,,$(subst tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_,,$(f))) `ogrinfo $(f) |  awk '/1:/{print $$2}'`;)
 
-	tbl_$(subst _vcmslcfg.avg_rade9.tif.txt,,$(subst tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_,,$(f)))
