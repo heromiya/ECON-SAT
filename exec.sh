@@ -20,7 +20,7 @@ for ARG in `cat ROI.lst | grep KOR`; do
     export LATMAX=`echo $XMAX $YMAX | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $2}'`
     export LONMIN=`echo $XMIN $YMIN | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $1}'`
     export LONMAX=`echo $XMAX $YMAX | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $1}'`
-    for FILE in `ls ngdc.noaa.gov | grep -e \.tif$ | grep -v -e web.stable_lights.avg_vis. | grep vcmslcfg.avg_rade9.tif`; do
+    for FILE in `ls ngdc.noaa.gov | grep -e \.tif$ | grep -v -e web.stable_lights.avg_vis.`; do
 	export FILE
 	make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.sqlite
 	#maps/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.png
