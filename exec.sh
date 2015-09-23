@@ -22,7 +22,10 @@ for ARG in `cat ROI.lst | grep KOR`; do
     export LONMAX=`echo $XMAX $YMAX | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $1}'`
     for FILE in `ls ngdc.noaa.gov | grep -e \.tif$ | grep -v -e web.stable_lights.avg_vis.`; do
 	export FILE
-	make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.sqlite
+	for ADM_LEVEL in `seq 0 5`; do
+	    export ADM_LEVEL
+	    make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.${ADM_LEVEL}.sqlite
+	done
 	#maps/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.$FILE.png
     done 
 

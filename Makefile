@@ -27,7 +27,16 @@ tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).$(FILE).sqlite:
 	v.out.ogr -c input=gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) dsn=$@ type=area format=SQLite
 #	v.db.select gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) > $@
 
-tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_vcmslcfg.avg_rade9.sqlite: tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_*_vcmslcfg.avg_rade9.tif.txt
-	$(foreach f,$+,echo "" | sqlite3 $@;)
+tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).$(FILE).$(ADM_LEVEL).sqlite:
+	mkdir -p `dirname $@`
+	v.in.ogr -o dsn=GIS_Data_Archive/src/gadm.org/gadm27_levels.sqlite output=gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) layer=adm$(ADM_LEVEL) spatial=$(LONMIN),$(LATMIN),$(LONMAX),$(LATMAX) --overwrite
+	g.region vect=gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) res=`gdalinfo ngdc.noaa.gov/$(FILE) | grep "Pixel Size" | sed 's/.*(\([.0-9]*\).*/\1/'`
+	rm -rf tmp.vrt && gdal_translate -of VRT -projwin $(LONMIN) $(LATMAX) $(LONMAX) $(LATMIN) ngdc.noaa.gov/$(FILE) tmp.vrt
+	r.in.gdal -o input=tmp.vrt output=rast_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) --overwrite
+	v.rast.stats -ce vector=gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) raster=rast_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) colprefix=rast
+	v.out.ogr -c input=gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) dsn=$@ type=area format=SQLite
+#	v.db.select gadm_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX) > $@
 
-	tbl_$(subst _vcmslcfg.avg_rade9.tif.txt,,$(subst tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_,,$(f)))
+#tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_vcmslcfg.avg_rade9.sqlite: tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_*_vcmslcfg.avg_rade9.tif.txt
+#	$(foreach f,$+,echo "" | sqlite3 $@;)
+#	tbl_$(subst _vcmslcfg.avg_rade9.tif.txt,,$(subst tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_,,$(f)))
