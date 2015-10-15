@@ -20,6 +20,7 @@ for ARG in `cat ROI.lst | grep KOR`; do
     export LATMAX=`echo $XMAX $YMAX | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $2}'`
     export LONMIN=`echo $XMIN $YMIN | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $1}'`
     export LONMAX=`echo $XMAX $YMAX | cs2cs -f "%.10lf" $EPSG3857 +to $EPSG4326 | awk '{print $1}'`
+:<<EOF
     for FILE in `ls ngdc.noaa.gov | grep -e \.tif$ | grep -v -e web.stable_lights.avg_vis.`; do
 	export FILE
 	for ADM_LEVEL in `seq 0 5`; do
@@ -33,9 +34,12 @@ for ARG in `cat ROI.lst | grep KOR`; do
 #	export PRODUCT
 #	make pdf/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}${PRODUCT}.pdf
 #   done
-#	make pdf/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp.vcmslcfg.avg_rade9.pdf
-	/bin/rm -f tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp_vcmslcfg.avg_rade9.sqlite
-	make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp_vcmslcfg.avg_rade9.sqlite
+#	make pdf/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp.vcmslcfg.avg_rade9.pd
+EOF
+export ADM_LEVEL=1
+#	/bin/rm -f ${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp_vcmslcfg.avg_rade9.${ADM_LEVEL}.sqlite
+#	make ${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp_vcmslcfg.avg_rade9.${ADM_LEVEL}.sqlite
+make organizeTimeSeriesTable.sql
 
 done
 
