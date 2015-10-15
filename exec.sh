@@ -34,7 +34,7 @@ for ARG in `cat ROI.lst | grep KOR`; do
 #	make pdf/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}${PRODUCT}.pdf
 #   done
 #	make pdf/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp.vcmslcfg.avg_rade9.pdf
-
+	/bin/rm -f tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp_vcmslcfg.avg_rade9.sqlite
 	make tab/${ROI}_${XMIN}_${YMIN}_${XMAX}_${YMAX}.SVDNB_npp_vcmslcfg.avg_rade9.sqlite
 
 done

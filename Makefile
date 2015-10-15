@@ -40,3 +40,6 @@ tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).$(FILE).$(ADM_LEVEL).sqlite:
 #tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_vcmslcfg.avg_rade9.sqlite: tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_*_vcmslcfg.avg_rade9.tif.txt
 #	$(foreach f,$+,echo "" | sqlite3 $@;)
 #	tbl_$(subst _vcmslcfg.avg_rade9.tif.txt,,$(subst tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_,,$(f)))
+
+tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_vcmslcfg.avg_rade9.sqlite: tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_*_vcmslcfg.avg_rade9.tif.sqlite
+	$(foreach f,$+,ogr2ogr -f SQLite -append -update $@ $(f) -nln tbl_$(subst _vcmslcfg.avg_rade9.tif.sqlite,,$(subst tab/$(ROI)_$(XMIN)_$(YMIN)_$(XMAX)_$(YMAX).SVDNB_npp_,,$(f))) `ogrinfo $(f) |  awk '/1:/{print $$2}'`;)
